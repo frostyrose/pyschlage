@@ -89,6 +89,7 @@ class TestAccessCode:
         to_json = code.to_json()
         # Access codes returned by the API don't have the `notificationEnabled`` property, but
         # we need to pass it when saving an access code.
+        # Test
         assert to_json.pop("notificationEnabled") == 0
         # We also don't pass the `notification` property when saving an access code, but
         # it appears to always be 0 when returned by the API.
